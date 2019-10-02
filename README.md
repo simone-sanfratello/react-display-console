@@ -2,6 +2,8 @@
 
 Display the `console` inside React app
 
+![preview](./doc/preview.png)
+
 ## Install
 
 ```
@@ -22,8 +24,6 @@ console.info('Loading from http://my.api/', { method: 'GET', query: 'order=name&
 console.error(new Error('invalid JSON object'))
 
 ```
-
-![preview](./doc/preview.png)
 
 ### props
 
