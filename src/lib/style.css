@@ -1,0 +1,151 @@
+.console {
+  display: flex;
+  width: 100%;
+  font-family: monospace;
+  white-space: pre;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .console .input {
+    width: 100%; }
+    .console .input input {
+      width: calc(100% - 6px);
+      padding: 3px;
+      font-family: monospace;
+      white-space: pre; }
+  .console ul {
+    padding-inline-start: 0; }
+  .console .line {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #99A3A4;
+    padding: 5px;
+    list-style-type: none; }
+    .console .line .mode {
+      display: inline-flex;
+      justify-content: space-between;
+      flex-direction: row;
+      font-style: italic;
+      padding: 5px;
+      margin-bottom: 5px; }
+      .console .line .mode.error {
+        border-left: 3px solid #943126; }
+      .console .line .mode.log {
+        border-left: 3px solid #99A3A4; }
+      .console .line .mode.debug {
+        border-left: 3px solid #212F3D; }
+      .console .line .mode.info {
+        border-left: 3px solid #2471A3; }
+      .console .line .mode.warn {
+        border-left: 3px solid #F4D03F; }
+    .console .line .content {
+      display: inline-flex;
+      flex-flow: row;
+      flex-wrap: wrap; }
+      .console .line .content .type {
+        display: inline-block;
+        border-radius: 4px;
+        margin: 1px;
+        align-self: center; }
+        .console .line .content .type .name {
+          font-weight: bold; }
+        .console .line .content .type.object, .console .line .content .type.array {
+          display: inline-flex;
+          color: #1A5276;
+          border: 1px solid #2471A3;
+          background-color: #EBF5FB;
+          padding: 3px;
+          flex-direction: column;
+          flex-wrap: wrap;
+          font-size: 14px; }
+          .console .line .content .type.object .item, .console .line .content .type.array .item {
+            font-size: 12px;
+            display: inline-flex; }
+            .console .line .content .type.object .item .key, .console .line .content .type.array .item .key {
+              display: inline-block;
+              min-width: 80px;
+              line-height: 20px;
+              text-align: right;
+              margin-right: 5px;
+              align-self: center; }
+            .console .line .content .type.object .item .value, .console .line .content .type.array .item .value {
+              display: inline-block;
+              align-self: center; }
+        .console .line .content .type.array {
+          color: #27AE60;
+          border: 1px solid #27AE60;
+          background-color: #ABEBC6;
+          flex-direction: row; }
+        .console .line .content .type.error {
+          color: #943126;
+          border: 1px solid #943126;
+          background-color: #FADBD8;
+          padding: 2px; }
+          .console .line .content .type.error .message {
+            color: #7B241C;
+            padding-left: 15px; }
+          .console .line .content .type.error .stack {
+            color: #212F3D;
+            font-size: 11px;
+            padding-left: 15px;
+            max-width: 100%;
+            overflow: auto; }
+        .console .line .content .type.number {
+          color: #D35400; }
+        .console .line .content .type.string {
+          color: #943126; }
+        .console .line .content .type.boolean {
+          color: #1A5276; }
+        .console .line .content .type.date {
+          color: #1A5276; }
+        .console .line .content .type.regexp {
+          color: #6C3483; }
+        .console .line .content .type.null, .console .line .content .type.undefined {
+          color: #D35400;
+          font-style: italic; }
+
+.console.dark {
+  background-color: #212F3D;
+  color: #fff; }
+  .console.dark ul,
+  .console.dark .input input {
+    background-color: #212F3D;
+    color: #fff; }
+  .console.dark li.line {
+    background-color: #212F3D;
+    color: #fff; }
+    .console.dark li.line .mode {
+      border-left: none; }
+      .console.dark li.line .mode.error {
+        background-color: #943126;
+        border-left: none; }
+      .console.dark li.line .mode.log {
+        background-color: #99A3A4; }
+      .console.dark li.line .mode.debug {
+        background-color: #fff;
+        color: #212F3D; }
+      .console.dark li.line .mode.info {
+        background-color: #2471A3; }
+      .console.dark li.line .mode.warn {
+        background-color: #F4D03F;
+        color: #D35400; }
+    .console.dark li.line .content .type.object {
+      color: #fff;
+      border-color: #85C1E9;
+      background-color: #2471A3; }
+    .console.dark li.line .content .type.array {
+      color: #fff;
+      border-color: #ABEBC6;
+      background-color: #27AE60; }
+    .console.dark li.line .content .type.number {
+      color: #D35400; }
+    .console.dark li.line .content .type.string {
+      color: #F4D03F; }
+    .console.dark li.line .content .type.boolean, .console.dark li.line .content .type.date {
+      color: #85C1E9; }
+    .console.dark li.line .content .type.regexp {
+      color: #ABEBC6; }
+    .console.dark li.line .content .type.null, .console.dark li.line .content .type.undefined {
+      color: #fff;
+      font-style: italic; }

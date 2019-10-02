@@ -1,0 +1,171 @@
+@import './colors.scss';
+
+.console {
+  display: flex;
+  width: 100%;
+  font-family: monospace;
+  white-space: pre;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .input {
+    width: 100%;
+
+    input {
+      width: calc(100% - 6px);
+      padding: 3px;
+      font-family: monospace;
+      white-space: pre;
+    }
+  }
+
+  ul {
+    padding-inline-start: 0;
+  }
+
+  .line {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $grey;
+    padding: 5px;
+    list-style-type: none;
+
+    .mode {
+      display: inline-flex;
+      justify-content: space-between;
+      flex-direction: row;
+      font-style: italic;
+      padding: 5px;
+      margin-bottom: 5px;
+
+      &.error {
+        border-left: 3px solid $red;
+      }
+
+      &.log {
+        border-left: 3px solid $grey;
+      }
+
+      &.debug {
+        border-left: 3px solid $black;
+      }
+
+      &.info {
+        border-left: 3px solid $blue;
+      }
+
+      &.warn {
+        border-left: 3px solid $yellow;
+      }
+
+    }
+
+    .content {
+      display: inline-flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+
+      .type {
+        display: inline-block;
+        border-radius: 4px;
+        // padding: 2px;
+        margin: 1px;
+        align-self: center;
+
+        .name {
+          font-weight: bold;
+        }
+
+        &.object,
+        &.array {
+          display: inline-flex;
+          color: $darkblue;
+          border: 1px solid $blue;
+          background-color: $lighterblue;
+          padding: 3px;
+          flex-direction: column;
+          flex-wrap: wrap;
+          font-size: 14px;
+
+          .item {
+            font-size: 12px;
+            display: inline-flex;
+
+            .key {
+              display: inline-block;
+              min-width: 80px;
+              line-height: 20px;
+              text-align: right;
+              margin-right: 5px;
+              align-self: center;
+            }
+
+            .value {
+              display: inline-block;
+              align-self: center;
+            }
+          }
+        }
+
+        &.array {
+          color: $green;
+          border: 1px solid $green;
+          background-color: $lightgreen;
+          flex-direction: row;
+        }
+
+        &.error {
+          color: $red;
+          border: 1px solid $red;
+          background-color: $lighterred;
+          padding: 2px;
+
+          .message {
+            color: $darkred;
+            padding-left: 15px;
+          }
+
+          .stack {
+            color: $black;
+            font-size: 11px;
+            padding-left: 15px;
+            max-width: 100%;
+            overflow: auto;
+          }
+        }
+
+        &.number {
+          color: $orange;
+        }
+
+        &.string {
+          color: $red;
+        }
+
+        &.boolean {
+          color: $darkblue;
+        }
+
+        &.date {
+          color: $darkblue;
+        }
+
+        &.regexp {
+          color: $purple;
+        }
+
+        &.null,
+        &.undefined {
+          color: $orange;
+          font-style: italic;
+        }
+
+      }
+    }
+  }
+}
+
+@import 'themes.scss';

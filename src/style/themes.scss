@@ -1,0 +1,86 @@
+@import 'colors.scss';
+
+.console.dark {
+  background-color: $black;
+  color: $white;
+
+  ul,
+  .input input {
+    background-color: $black;
+    color: $white;
+  }
+
+  li.line {
+    background-color: $black;
+    color: $white;
+
+    .mode {
+      border-left: none;
+
+      &.error {
+        background-color: $red;
+        border-left: none;
+      }
+
+      &.log {
+        background-color: $grey;
+      }
+
+      &.debug {
+        background-color: $white;
+        color: $black;
+      }
+
+      &.info {
+        background-color: $blue;
+      }
+
+      &.warn {
+        background-color: $yellow;
+        color: $orange;
+      }
+
+    }
+
+    .content {
+      .type {
+
+        &.object {
+          color: $white;
+          border-color: $lightblue;
+          background-color: $blue;
+        }
+
+        &.array {
+          color: $white;
+          border-color: $lightgreen;
+          background-color: $green;
+        }
+
+        &.number {
+          color: $orange;
+        }
+
+        &.string {
+          color: $yellow;
+        }
+
+        &.boolean,
+        &.date {
+          color: $lightblue;
+        }
+
+        &.regexp {
+          color: $lightgreen;
+        }
+
+        &.null,
+        &.undefined {
+          color: $white;
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,63 @@
+{
+  "name": "react-display-console",
+  "version": "0.2.0",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "classnames": "^2.2.6",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.2"
+  },
+  "scripts": {
+    "build-css": "node-sass src/style/style.scss > src/lib/style.css",
+    "build-release": "npm run build-css && rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
+    "prestart": "npm run build-css",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "env",
+      "stage-2"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 2 chrome version",
+      "last 2 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "keywords": [
+    "react",
+    "console",
+    "dev"
+  ],
+  "files": [
+    "dist",
+    "doc",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simone-sanfratello/react-display-console"
+  }
+}
