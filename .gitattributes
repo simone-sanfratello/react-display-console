@@ -1,3 +1,4 @@
 dist/* linguist-vendored
 doc/* linguist-vendored
 public/* linguist-vendored
+src/style/* linguist-vendored
