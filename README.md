@@ -69,11 +69,8 @@ There are no strict rules, any reasonable PR will be accepted 👍
 
 ---
 
-### TODO
+### Next
 
-- [ ] build
-  - [ ] css > js
-  - [ ] test npm i
 - [ ] display correct source file and line in Error stack (use sourcemap?)
 - [ ] display `at file:line` (use sourcemap?)
 - [ ] `clear` button
