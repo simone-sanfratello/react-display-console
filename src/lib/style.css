@@ -43,12 +43,11 @@
       display: inline-flex;
       flex-flow: row;
       flex-wrap: wrap; }
-      .console .line .content > .type {
-        margin-top: 8px; }
       .console .line .content .type {
         display: inline-block;
         border-radius: 4px;
         margin: 2px;
+        margin-top: 8px;
         align-self: start; }
         .console .line .content .type .name {
           font-weight: bold; }
@@ -62,6 +61,8 @@
           flex-direction: column;
           flex-wrap: wrap;
           font-size: 14px; }
+          .console .line .content .type.object .type, .console .line .content .type.array .type {
+            margin-top: 2px; }
           .console .line .content .type.object .item, .console .line .content .type.array .item {
             font-size: 12px;
             display: inline-flex; }

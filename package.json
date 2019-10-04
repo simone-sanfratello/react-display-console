@@ -1,6 +1,6 @@
 {
   "name": "react-display-console",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
