@@ -30,8 +30,15 @@ console.error(new Error('invalid JSON object'))
 - **input**
   show input at bottom to write statements, like in real `console`
 
-- **theme**
-  use a theme class; available builtin theme is `dark`
+- **theme** (optional)
+  use a theme class; available builtin themes are:
+
+  - `default`  
+![theme-default](./doc/theme-default.png)
+
+  - `dark`  
+![theme-dark](./doc/theme-dark.png)
+
 
 ## How it works
 
@@ -60,7 +67,7 @@ then
 
 ## Purpose
 
-`react-display-console` component arises from the need to view the console output in the browser for educational, development or debugging purposes, especially when it's difficult to access devtools in non-desktop environments (mobile, TV and etc).
+`react-display-console` component arises from the need to view the console output in the browser for educational, development or debugging purposes, especially when it's difficult to access devtools in non-desktop environments (mobile, TV etc).
 
 ## Contribute
 

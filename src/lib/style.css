@@ -43,14 +43,17 @@
       display: inline-flex;
       flex-flow: row;
       flex-wrap: wrap; }
+      .console .line .content > .type {
+        margin-top: 8px; }
       .console .line .content .type {
         display: inline-block;
         border-radius: 4px;
-        margin: 1px;
-        align-self: center; }
+        margin: 2px;
+        align-self: start; }
         .console .line .content .type .name {
           font-weight: bold; }
         .console .line .content .type.object, .console .line .content .type.array {
+          margin-top: 2px;
           display: inline-flex;
           color: #1A5276;
           border: 1px solid #2471A3;

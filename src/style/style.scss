@@ -67,13 +67,13 @@
       display: inline-flex;
       flex-flow: row;
       flex-wrap: wrap;
-
+      
       .type {
         display: inline-block;
         border-radius: 4px;
-        // padding: 2px;
-        margin: 1px;
-        align-self: center;
+        margin: 2px;
+        margin-top: 8px;
+        align-self: start;
 
         .name {
           font-weight: bold;
@@ -81,6 +81,7 @@
 
         &.object,
         &.array {
+          margin-top: 2px;
           display: inline-flex;
           color: $darkblue;
           border: 1px solid $blue;
@@ -89,6 +90,10 @@
           flex-direction: column;
           flex-wrap: wrap;
           font-size: 14px;
+
+          .type {
+            margin-top: 2px;
+          }
 
           .item {
             font-size: 12px;
